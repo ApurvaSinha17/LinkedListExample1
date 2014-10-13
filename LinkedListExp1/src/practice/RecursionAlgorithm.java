@@ -2,7 +2,8 @@ package practice;
 
 public class RecursionAlgorithm {
 	
-	private static Boolean printFlag = false;
+}
+/*	private static Boolean printFlag = false;
 
 	public static void main(String args[]){
 		
@@ -36,3 +37,4 @@ public class RecursionAlgorithm {
 		return i;
 	}
 }
+*/

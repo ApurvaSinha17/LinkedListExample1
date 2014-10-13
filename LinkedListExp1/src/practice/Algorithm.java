@@ -2,8 +2,6 @@ package practice;
 
 public class Algorithm {
 
-}
-/*
 	public static void main(String[] args) {
 		
 		int linkedListLength = Integer.parseInt(args[0]);
@@ -11,7 +9,7 @@ public class Algorithm {
 		Node headNode = null;
 		
 		//Using Recursion - Start
-		if(linkedListLength<=0){
+		/*if(linkedListLength<=0){
 			headNode=null;
 		}
 		else{
@@ -22,11 +20,11 @@ public class Algorithm {
 		while(presentNode!=null){
 			System.out.println("First Node value: "+presentNode.getData());
 			presentNode = presentNode.getNextNode();
-		}
+		}*/
 		//Using Recursion - End
 		
 	//Not using Recursion - Start
-		//headNode = new LinkedListCreate().getHeadNode(linkedListLength);
+		headNode = new LinkedListCreate().getHeadNode(linkedListLength);
 	//Not using Recursion - End
 		
 		if(headNode==null){
@@ -66,4 +64,3 @@ public class Algorithm {
 	}
 
 }
-*/
