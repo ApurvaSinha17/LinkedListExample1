@@ -8,6 +8,12 @@ public class Algorithm {
 		int kPositionFromEnd = Integer.parseInt(args[1]);
 		Node headNode = null;
 		
+		if(kPositionFromEnd>linkedListLength || kPositionFromEnd<=0){
+			
+			System.out.println("Please enter a valid value for Kth position from end");
+			System.exit(0);
+		}
+		
 		//Using Recursion - Start
 		/*if(linkedListLength<=0){
 			headNode=null;
@@ -27,7 +33,18 @@ public class Algorithm {
 		headNode = new LinkedListCreate().getHeadNode(linkedListLength);
 	//Not using Recursion - End
 		
-		if(headNode==null){
+	//Iterative approach : O(n) time and O(1) space complexities
+		/*Iterative iterative = new Iterative();
+		Node kNode = iterative.getKthNode(headNode,kPositionFromEnd);*/
+		
+	//Recursive approach using Wrapper class : O(n) time and O(n) space complexities
+		RecursionAlgorithm recursionAlgorithm = new RecursionAlgorithm();
+		Node kNode = recursionAlgorithm.getKthNode(headNode, kPositionFromEnd, new NodeIndex());
+		
+		Algorithm algorithm = new Algorithm();
+		algorithm.nodeDisplay(kNode);
+		
+		/*if(headNode==null){
 			System.out.println("Length of linked list need to be a positive value");
 		}
 		else{			
@@ -60,7 +77,18 @@ public class Algorithm {
 				}
 			}
 		}
-
+*/
+	}
+	
+	public void nodeDisplay(Node node){
+		
+		Node currNode = node;
+		
+		while(currNode!=null){
+			
+			System.out.println(currNode.getData());
+			currNode = currNode.getNextNode();
+		}
 	}
 
 }
